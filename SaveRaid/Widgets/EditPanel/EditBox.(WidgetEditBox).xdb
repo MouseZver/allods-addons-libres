@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetEditBox>
+	<Name>EditBox</Name>
+	<Priority>0</Priority>
+	<Visible>true</Visible>
+	<Enabled>true</Enabled>
+	<TabOrder>0</TabOrder>
+	<Priority>0</Priority>
+	<Children />
+	<Placement>
+		<QuantumScale>false</QuantumScale>
+		<sizingWidget href="" />
+		<sizingWidgets />
+		<X>
+			<Pos>15</Pos>
+			<Size>237</Size>
+		</X>
+		<Y>
+			<Pos>10</Pos>
+			<Size>247</Size>
+		</Y>
+	</Placement>
+	<TransparentInput>false</TransparentInput>
+	<Cursor1Layer href="Textures/Cursor.(WidgetLayerSimpleTexture).xdb#xpointer(/WidgetLayerSimpleTexture)" />
+	<Cursor2Layer href="Textures/Cursor2.(WidgetLayerSimpleTexture).xdb#xpointer(/WidgetLayerSimpleTexture)" />
+	<CursorWidth>2</CursorWidth>
+	<CursorChangeTimeMs>500</CursorChangeTimeMs>
+	<maxSymbolsCount>-1</maxSymbolsCount>
+	<TextStyle>
+		<multiline>true</multiline>
+		<wrapText>true</wrapText>
+		<showClippedSymbol>false</showClippedSymbol>
+		<showClippedLine>true</showClippedLine>
+		<lineSpacing>0</lineSpacing>
+		<ellipsis>true</ellipsis>
+		<Align>ALIGNY_TOP</Align>
+	</TextStyle>
+	<globalClassName />
+	<selectionClassName />
+	<selectionLayer href="Textures/Select.(WidgetLayerSimpleTexture).xdb#xpointer(/WidgetLayerSimpleTexture)" />
+	<scrollBar href="GlideScrollBar/GlideScrollBar.(WidgetGlideScrollBar).xdb" />
+	<ReactionEsc>EditBoxEscape</ReactionEsc>
+	<ReactionChanged>ChangeBox</ReactionChanged>
+	<ReactionEnter />
+	<isPassword>false</isPassword>
+	<ReactionChanged />
+	<reactionPaste />
+	<reactionFocusChanged />
+	<reactionCapsLock />
+</WidgetEditBox>

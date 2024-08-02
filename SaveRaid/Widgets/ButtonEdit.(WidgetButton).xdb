@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetButton>
+  <Name>ButtonEditSPR</Name>
+  <Placement>
+    <X>
+      <Align>WIDGET_ALIGN_CENTER</Align>
+      <Pos>24</Pos>
+      <Size>32</Size>
+    </X>
+    <Y>
+	  <Align>WIDGET_ALIGN_HIGH</Align>	
+      <Size>32</Size>
+	  <HighPos>13</HighPos>
+    </Y>
+  </Placement>
+  <IgnoreDblClick>true</IgnoreDblClick>
+  <Variants>
+    <Item>
+	<StateNormal>
+		<LayerMain href="Textures/ButtonEditNormal.(WidgetLayerSimpleTexture).xdb" />
+	</StateNormal>
+	<StatePushed>
+		<LayerMain href="Textures/ButtonEditPressed.(WidgetLayerSimpleTexture).xdb" />
+	</StatePushed>
+	<StateHighlighted>
+	<LayerMain href="Textures/ButtonEditOver.(WidgetLayerSimpleTexture).xdb" />
+	</StateHighlighted>
+	<StatePushedHighlighted>
+		<LayerMain href="Textures/ButtonEditPressedHighlighted.(WidgetLayerSimpleTexture).xdb" />
+	</StatePushedHighlighted> 
+      <Reaction>mouse_left_click</Reaction>
+      <ReactionOnUp>true</ReactionOnUp>
+	  
+    </Item>
+  </Variants>
+  <Visible>true</Visible>
+</WidgetButton>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetEditLine>
+	<Name>EditLineRaidAddPlayer</Name>
+	<Priority>0</Priority>
+	<Children />
+	<BackLayer href="" />
+	<textureMask href="" />
+	<Placement>
+		<X>
+			<Pos>15</Pos>
+			<Size>150</Size>
+		</X>
+		<Y>
+			<Pos>0</Pos>
+			<Size>30</Size>
+		</Y>
+	</Placement>
+	<Visible>true</Visible>
+	<Enabled>true</Enabled>
+	<TransparentInput>false</TransparentInput>
+	<PickChildrenOnly>false</PickChildrenOnly>
+	<Cursor1Layer href="Textures/Cursor.(WidgetLayerSimpleTexture).xdb#xpointer(/WidgetLayerSimpleTexture)" />
+	<Cursor2Layer href="Textures/Cursor2.(WidgetLayerSimpleTexture).xdb#xpointer(/WidgetLayerSimpleTexture)" />
+	<CursorWidth>2</CursorWidth>
+	<CursorChangeTimeMs>500</CursorChangeTimeMs>
+	<ReactionEsc>EditLineEscape</ReactionEsc>
+	<ReactionEnter>EditLineEnter</ReactionEnter>
+	<ReactionChanged>Change</ReactionChanged>
+	<reactionFocusChanged>ChangeFocus</reactionFocusChanged>
+	<TextStyle>
+		<multiline>false</multiline>
+		<wrapText>true</wrapText>
+		<showClippedSymbol>false</showClippedSymbol>
+		<showClippedLine>true</showClippedLine>
+		<lineSpacing>0</lineSpacing>
+		<ellipsis>true</ellipsis>
+		<Align>ALIGNY_MIDDLE</Align>
+	</TextStyle>
+	<isPassword>false</isPassword>
+	<maxSymbolsCount>14</maxSymbolsCount>
+	<globalClassName />
+	<selectionClassName />
+	<filterAlias />
+	<selectionLayer href="Textures/Select.(WidgetLayerSimpleTexture).xdb#xpointer(/WidgetLayerSimpleTexture)" />
+</WidgetEditLine>

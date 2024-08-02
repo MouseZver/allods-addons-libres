@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetPanel>
+	<Name>MainPanel</Name>
+	<Children>
+		<Item href="ButtonEdit.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+		<Item href="ItemPanel.(WidgetPanel).xdb" />
+		<Item href="LootPanel.(WidgetPanel).xdb" />
+		<Item href="ModePanel.(WidgetPanel).xdb" />
+		<Item href="QualityPanel.(WidgetPanel).xdb" />
+		<Item href="SearchLine.(WidgetPanel).xdb" />
+		<Item href="ButtonCornerCross.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+		<Item href="HeaderText.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Container.(WidgetScrollableContainer).xdb#xpointer(/WidgetScrollableContainer)" />
+	</Children>
+	<BackLayer href="Textures/MainFrame.(WidgetLayerTiledTexture).xdb" />
+<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Size>400</Size>
+			<Pos>150</Pos>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Pos>150</Pos>
+			<Size>500</Size>
+		</Y>
+	</Placement>
+	<TransparentInput>false</TransparentInput>
+	<clipContent>false</clipContent>
+</WidgetPanel>
