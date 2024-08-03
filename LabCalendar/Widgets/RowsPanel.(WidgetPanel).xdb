@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetPanel>
+	<Name>RowsPanel</Name>
+	<Children>
+		<Item href="ItemPanel/ItemPanel.(WidgetPanel).xdb#xpointer(/WidgetPanel)" />
+		<Item href="Currencies/Currencies.(WidgetPanel).xdb#xpointer(/WidgetPanel)" />
+		<Item href="ButtonCornerCross.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+		<Item href="SortButton.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+		<Item href="HeaderText.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="AutoRestart.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Container.(WidgetScrollableContainer).xdb#xpointer(/WidgetScrollableContainer)" />
+		<Item href="CheckBox.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+		<Item href="ButtonSettings.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+	</Children>
+	<BackLayer href="Textures/MainFrame.(WidgetLayerTiledTexture).xdb" />
+<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_CENTER</Align>
+			<Size>500</Size>
+			<Pos>150</Pos>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_CENTER</Align>
+			<Size>600</Size>
+		</Y>
+	</Placement>
+	<TransparentInput>false</TransparentInput>
+	<clipContent>false</clipContent>
+	<Visible>false</Visible>
+</WidgetPanel>

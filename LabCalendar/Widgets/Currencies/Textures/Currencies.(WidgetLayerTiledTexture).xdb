@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetLayerTiledTexture>
+	<textureItem href="Currencies.(UISingleTexture).xdb#xpointer(/UISingleTexture)" />
+	<Layout>
+		<LeftX>90</LeftX>
+		<MiddleX>146</MiddleX>
+		<RightX>90</RightX>
+		<TopY>0</TopY>
+		<MiddleY>85</MiddleY>
+		<BottomY>0</BottomY>
+	</Layout>
+</WidgetLayerTiledTexture>

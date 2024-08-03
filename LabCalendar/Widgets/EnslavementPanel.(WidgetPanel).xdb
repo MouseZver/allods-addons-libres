@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetPanel>
+	<Name>EnslavementPanel</Name>
+	<Children>
+		<Item href="EnslavementPanel/ItemPanel/ItemPanel.(WidgetPanel).xdb#xpointer(/WidgetPanel)" />
+		<Item href="EnslavementPanel/ButtonCloseEnslavement.(WidgetButton).xdb#xpointer(/WidgetButton)" />
+		<Item href="EnslavementPanel/HeaderText.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="EnslavementPanel/Container.(WidgetScrollableContainer).xdb#xpointer(/WidgetScrollableContainer)" />
+	</Children>
+	<BackLayer href="Textures/MainFrame.(WidgetLayerTiledTexture).xdb" />
+<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_CENTER</Align>
+			<Size>445</Size>
+			<Pos>150</Pos>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_CENTER</Align>
+			<Size>400</Size>
+		</Y>
+	</Placement>
+	<TransparentInput>false</TransparentInput>
+	<clipContent>false</clipContent>
+	<Visible>false</Visible>
+</WidgetPanel>

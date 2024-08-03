@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetPanel>
+	<Name>Currencies</Name>
+	<Children>
+		<Item href="Coral.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Granit.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Embrium.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Spark.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Supplies.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="PayToMerc.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+		<Item href="Icon.(WidgetPanel).xdb#xpointer(/WidgetPanel)" />
+		<Item href="SearchLine.(WidgetPanel).xdb#xpointer(/WidgetPanel)" />
+		<Item href="Info.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+	</Children>
+	<BackLayer href="Textures/Currencies.(WidgetLayerTiledTexture).xdb#xpointer(/WidgetLayerTiledTexture)" />
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_BOTH</Align>
+			<Pos>14</Pos>
+			<HighPos>14</HighPos>
+
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Size>84</Size>
+			<Pos>35</Pos>
+		</Y>
+	</Placement>
+	<Visible>true</Visible>
+	<TransparentInput>false</TransparentInput>
+</WidgetPanel>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetPanel>
+    <Name>SearchLine</Name>
+    <Children>
+		<Item href="EditLine.(WidgetEditLine).xdb#xpointer(/WidgetEditLine)" />
+		<Item href="Label.(WidgetTextView).xdb#xpointer(/WidgetTextView)" />
+    </Children>
+	<BackLayer href="Textures/MainFrame.(WidgetLayerTiledTexture).xdb#xpointer(/WidgetLayerTiledTexture)" />
+    <Placement>
+        <X>
+            <Align>WIDGET_ALIGN_LOW</Align>
+            <Size>180</Size>
+			<Pos>20</Pos>
+        </X>
+        <Y>
+            <Align>WIDGET_ALIGN_LOW</Align>
+            <Size>50</Size>
+			<Pos>51</Pos>
+        </Y>
+    </Placement>
+	<Visible>true</Visible>
+</WidgetPanel>

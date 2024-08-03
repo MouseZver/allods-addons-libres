@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIAddon>
+  <AutoStart>true</AutoStart>
+  <localizedNameFileRef href="name.txt"/>
+  <localizedDescFileRef href="desc.txt"/> 
+	<Form href="Widgets/MainForm.(WidgetForm).xdb"/>
+  <texturesGroups>
+	<Item>
+		<groupName>Group01</groupName>
+			<textures href="Widgets/Textures/Textures.(UIRelatedTextures).xdb#xpointer(/UIRelatedTextures)"/>
+	</Item>
+  </texturesGroups>
+  <Name>LabCalendar</Name>
+  <ScriptFileRefs>
+	<Item href="/Interface/Common/CoreScripts/AddonBase.lua"/>
+	<Item href="/Mods/SampleCommon/SampleAddonBase.lua"/>
+	<Item href="Scripts/config.txt"/>
+	<Item href="Scripts/LibDnD.lua"/>
+	<Item href="Scripts/Localization.lua"/> 
+	<Item href="Scripts/Main.lua"/>
+  </ScriptFileRefs>
+  <texts href=""/>
+  <visObjects href=""/>
+<addon_name>LabCalendar</addon_name><addon_date>1719514885</addon_date><addon_link>https://alloder.pro/files/file/384-labcalendar/?do=download&amp;r=24252&amp;confirm=1&amp;t=1&amp;csrfKey=</addon_link></UIAddon>

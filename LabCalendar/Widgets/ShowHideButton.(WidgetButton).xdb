@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WidgetButton>
+	<Name>ShowForm</Name>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Pos>250</Pos>
+			<Size>70</Size>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Pos>250</Pos>
+			<Size>32</Size>
+		</Y>
+	</Placement>
+	<TextTag>button_label</TextTag>
+	<Variants>
+		<Item>
+			<LayerHighlight href="Textures/ButtonRegularHighlighted.(WidgetLayerTiledTexture).xdb" />
+			<PushedOffset x="-2" y="2" />
+			<StateNormal>
+				<LayerMain href="Textures/ButtonRegularNormal.(WidgetLayerTiledTexture).xdb" />
+				<FormatFileRef href="ButtonFormatNormal.txt" />
+			</StateNormal>
+			<StatePushed>
+				<LayerMain href="Textures/ButtonRegularPressed.(WidgetLayerTiledTexture).xdb" />
+			</StatePushed>
+			<ReactionOnUp>true</ReactionOnUp>
+			<Reaction>ButtonReaction</Reaction>
+			<ReactionRightClick>ButtonReactionR</ReactionRightClick>
+		</Item>
+	</Variants>
+	<TextStyle><Align>ALIGNY_MIDDLE</Align></TextStyle>
+</WidgetButton>
