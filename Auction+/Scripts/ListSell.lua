@@ -225,7 +225,7 @@ ListSell.AddLine = function(auctionInfo)
 		ListSell.UpdateLine(line, itemCount)
 	else
 		line = ListSell.FillNewLine(PricePerUnit, itemCount)
-		line.widget:Show(true)
+		--line.widget:Show(true)
 		ListSell.container:PushBack(line.widget)
 	end
 end
