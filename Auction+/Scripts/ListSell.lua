@@ -214,20 +214,20 @@ ListSell.FindLine = function(name)
 end
 
 ListSell.AddLine = function(auctionInfo)
-	-- local BuyoutPrice = auctionInfo.buyoutPrice
-	-- if not BuyoutPrice or BuyoutPrice == nil or BuyoutPrice <= 0 then return end
+	local BuyoutPrice = auctionInfo.buyoutPrice
+	if not BuyoutPrice or BuyoutPrice == nil or BuyoutPrice <= 0 then return end
 
-	-- local itemCount = itemLib.GetStackInfo(auctionInfo.itemId).count
-	-- local PricePerUnit = BuyoutPrice/itemCount
-	-- local nameLine = tostring(PricePerUnit)
-	-- local line = ListSell.FindLine(nameLine)
-	-- if line and line ~= nil then
-		-- ListSell.UpdateLine(line, itemCount)
-	-- else
-		-- line = ListSell.FillNewLine(PricePerUnit, itemCount)
-		-- line.widget:Show(true)
-		-- ListSell.container:PushBack(line.widget)
-	-- end
+	local itemCount = itemLib.GetStackInfo(auctionInfo.itemId).count
+	local PricePerUnit = BuyoutPrice/itemCount
+	local nameLine = tostring(PricePerUnit)
+	local line = ListSell.FindLine(nameLine)
+	if line and line ~= nil then
+		ListSell.UpdateLine(line, itemCount)
+	else
+		line = ListSell.FillNewLine(PricePerUnit, itemCount)
+		line.widget:Show(true)
+		ListSell.container:PushBack(line.widget)
+	end
 end
 
 ListSell.AuctionSearch = function()

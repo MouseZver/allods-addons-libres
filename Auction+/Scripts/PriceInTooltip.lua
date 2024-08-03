@@ -115,7 +115,7 @@ end
 
 function PushPriceInToolTip(container)
 	local Name = container:At(0)
-	if (common.GetApiType(Name) ~= "TextViewSafe") then return end
+	if (common.GetApiType(Name) ~= "Widget_TextViewSafe") then return end
 	local Itemname = userMods.FromWString(Name:GetWString())
 	if FillContainerPrice(Itemname) then
 		local IconSmartLineFound = false
