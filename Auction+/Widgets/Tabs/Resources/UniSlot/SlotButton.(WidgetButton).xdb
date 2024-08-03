@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WidgetButton>
+	<Header>
+		<Prototype href="SlotButton/SlotButton.Prototype.(WidgetButton).xdb" />
+	</Header>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_BOTH</Align>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_BOTH</Align>
+		</Y>
+	</Placement>
+	<useDefaultSounds>false</useDefaultSounds>
+</WidgetButton>

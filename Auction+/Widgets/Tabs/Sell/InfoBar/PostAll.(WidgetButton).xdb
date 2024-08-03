@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WidgetButton>
+	<Header>
+		<Prototype href="../../Resources/AuctionButtonCommon/AuctionButtonCommon.Prototype.(WidgetButton).xdb" />
+	</Header>
+	<Name>PostAll</Name>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_HIGH</Align>
+			<Pos>0</Pos>
+			<HighPos>200</HighPos>
+			<Size>190</Size>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_HIGH</Align>
+			<Pos>0</Pos>
+			<HighPos>4</HighPos>
+			<Size>36</Size>
+		</Y>
+	</Placement>
+	<Visible>true</Visible>
+	<Enabled>false</Enabled>
+	<Variants>
+		<Item>
+			<Reaction>button_pressed</Reaction>
+		</Item>
+	</Variants>
+</WidgetButton>
