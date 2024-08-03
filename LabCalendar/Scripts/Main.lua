@@ -1235,7 +1235,7 @@ function RemortListInfo()
         local wtcont = RemortNames:At(num)
         local child = wtcont:GetNamedChildren()
         for _, v in pairs(child) do
-            if (common.GetApiType(v) == "TextViewSafe") and v:GetName() == "Name" then
+            if (common.GetApiType(v) == "Widget_TextViewSafe") and v:GetName() == "Name" then
                 local txt = userMods.FromWString(v:GetValuedText():ToWString())
                 local lens = string.len(txt)
                 local conv = trim(string.sub(txt, 1, lens - 5))
@@ -1258,7 +1258,7 @@ function ClearWG(params)
                 local wtcont = RemortNames:At(num)
                 local child = wtcont:GetNamedChildren()
                 for _, v in pairs(child) do
-                    if (common.GetApiType(v) == "TextViewSafe") and v:GetName() == "Name" then
+                    if (common.GetApiType(v) == "Widget_TextViewSafe") and v:GetName() == "Name" then
                         local cld = v:GetNamedChildren()
                         for _, vv in pairs(cld) do
                             vv:DestroyWidget()
