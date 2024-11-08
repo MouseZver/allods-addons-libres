@@ -11,5 +11,6 @@
 			<Align>WIDGET_ALIGN_BOTH</Align>
 		</Y>
 	</Placement>
+	<reactionOnPointing>false</reactionOnPointing>
 	<useDefaultSounds>false</useDefaultSounds>
 </WidgetButton>

@@ -130,7 +130,7 @@ ListSell.SplitItem = function(sender, count, stackCount)
 	local tableFreeSlots = FindFreeSlots()
 	
 	if tableFreeSlots and #tableFreeSlots > 0 then
-		for i = math.random( 1, #tableFreeSlots ), #tableFreeSlots do -- math.random( 1, #tableFreeSlots )
+		for i = 1, #tableFreeSlots do -- math.random( 1, #tableFreeSlots )
 			
 			if avatar.InventoryCanPlaceItemToSlot(itemInfo.id, tableFreeSlots[i]) then
 				--common.LogInfo("common", "free slot found")
@@ -403,6 +403,7 @@ ListSell.AuctionIsVisible = function(params)
 end
 
 InfoBar.Fill = function(itemId)
+	
 	AuctionProperties = auction.GetProperties()
 	ListSell.GetInfo(itemId)
 	FillUniSlot(InfoBar.UniSlot.widget, itemInfo.icon, itemInfo.quality, false, nil, nil)
@@ -411,18 +412,18 @@ InfoBar.Fill = function(itemId)
 	InfoBar.Quantity.edit:SetText(common.FormatInt(1, "%d")) -- itemInfo.stackCount to 1
 	--SetMoney(InfoBar.StartPrice.price, itemInfo.prices.auctionPrice)
 	InfoBar.Duration["48h"].checkbox:SetVariant(1)
-	
+	--common.LogInfo("common", tostring(userMods.FromWString(itemInfo.name) == "Призрачное зелье исцеления"))
 	local deposit = GetPercentDuration(CheckDuration()) * itemInfo.prices.auctionPrice * (InfoBar.Quantity.edit:GetText():ToInt()) / 100
 	
 	if deposit == 15000 then
-		SetMoney(InfoBar.StartPrice.price, 1911100) -- itemInfo.prices.auctionPrice
-		SetMoney(InfoBar.BuyoutPrice.price, 5111100)
+		SetMoney(InfoBar.StartPrice.price, 1911111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 5111111)
 	elseif deposit == 144 then
-		SetMoney(InfoBar.StartPrice.price, 19111100) -- itemInfo.prices.auctionPrice
-		SetMoney(InfoBar.BuyoutPrice.price, 29111100)
+		SetMoney(InfoBar.StartPrice.price, 19111111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 29111111)
 	elseif deposit == 1050 then
-		SetMoney(InfoBar.StartPrice.price, 15111100) -- itemInfo.prices.auctionPrice
-		SetMoney(InfoBar.BuyoutPrice.price, 19111100)
+		SetMoney(InfoBar.StartPrice.price, 12111111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 15111111)
 	end
 	
 	-- SetMoney(InfoBar.StartPrice.price, 6661111111)
@@ -737,6 +738,7 @@ ListSell.RegWIdgetsIDs = function()
 	for i = 1, #RegWIdgetsIDs do
 		--common.LogInfo("common", "widget - ", tostring(RegWIdgetsIDs[i].widget), ", id - ", tostring(RegWIdgetsIDs[i].id))
 		mission.DNDRegister(RegWIdgetsIDs[i].widget, RegWIdgetsIDs[i].id, true)
+		-- DND.Register(RegWIdgetsIDs[i].widget, true)
 	end
 end
 
