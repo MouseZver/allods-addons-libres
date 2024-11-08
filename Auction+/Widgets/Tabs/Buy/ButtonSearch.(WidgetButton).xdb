@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../Resources/AuctionButtonCommon/AuctionButtonCommon.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>StartSearch</Reaction>
+		</Item>
+	</Variants>
 	<Name>ButtonSearch</Name>
 	<Placement>
 		<X>
@@ -12,15 +14,13 @@
 		</X>
 		<Y>
 			<Align>WIDGET_ALIGN_LOW</Align>
-			<Pos>37</Pos>
+			<Pos>51</Pos>
 			<Size>38</Size>
 		</Y>
 	</Placement>
 	<Visible>true</Visible>
 	<Enabled>true</Enabled>
-	<Variants>
-		<Item>
-			<Reaction>StartSearch</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../Resources/AuctionButtonCommon/AuctionButtonCommon.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

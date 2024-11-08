@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Value.txt" />
 	<Name>Value</Name>
 	<BackLayer href="../../Textures/ContentFrame.(WidgetLayerTiledTexture).xdb" />
 	<Placement>
@@ -15,5 +16,4 @@
 		</Y>
 	</Placement>
 	<Enabled>false</Enabled>
-	<FormatFileRef href="Value.txt" />
 </WidgetTextView>

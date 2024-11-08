@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetScrollableContainer>
+	<scrollBar href="../Resources/ScrollBar/GlideScrollBar.xdb" />
+	<border href="Border.xdb" />
+	<widgetsArrangement>WIDGETS_ARRANGEMENT_T2B</widgetsArrangement>
 	<Name>Container</Name>
+	<BackLayer href="" />
 	<Priority>2</Priority>
 	<Placement>
 		<X>
@@ -19,7 +23,4 @@
 	<PickChildrenOnly>true</PickChildrenOnly>
 	<IgnoreDblClick>true</IgnoreDblClick>
 	<clipContent>true</clipContent>
-	<border href="Border.xdb" />
-	<widgetsArrangement>WIDGETS_ARRANGEMENT_T2B</widgetsArrangement>
-	<scrollBar href="../Resources/ScrollBar/GlideScrollBar.xdb" />
 </WidgetScrollableContainer>

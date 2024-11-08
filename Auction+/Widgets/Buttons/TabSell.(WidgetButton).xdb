@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Name>TabSell</Name>
-	<Priority>0</Priority>
-	<Placement>
-		<X>
-			<Align>WIDGET_ALIGN_LOW</Align>
-			<Pos>600</Pos>
-			<Size>100</Size>
-		</X>
-		<Y>
-			<Align>WIDGET_ALIGN_HIGH</Align>
-			<Pos>0</Pos>
-			<Size>40</Size>
-		</Y>
-	</Placement>
-	<Visible>true</Visible>
-	<IgnoreDblClick>true</IgnoreDblClick>
 	<TextTag>button_label</TextTag>
 	<Variants>
 		<Item>
@@ -55,4 +39,20 @@
 	<TextStyle>
 		<Align>ALIGNY_MIDDLE</Align>
 	</TextStyle>
+	<Name>TabSell</Name>
+	<Priority>0</Priority>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Pos>600</Pos>
+			<Size>100</Size>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_HIGH</Align>
+			<Pos>0</Pos>
+			<Size>40</Size>
+		</Y>
+	</Placement>
+	<Visible>true</Visible>
+	<IgnoreDblClick>true</IgnoreDblClick>
 </WidgetButton>

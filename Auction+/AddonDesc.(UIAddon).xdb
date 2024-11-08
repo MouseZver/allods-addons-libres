@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UIAddon>
 	<Name>Auction+</Name>
-	<localizedNameFileRef href="name.txt" />
-	<localizedDescFileRef href="desc.txt" />
 	<AutoStart>true</AutoStart>
 	<ScriptFileRefs>
-		<Item href="Scripts/LibDnD.lua" />
-		<Item href="Scripts/Localization.lua" />
-		<Item href="Scripts/Common.lua" />
-		<Item href="Scripts/ListBuy.lua" />
-		<Item href="Scripts/ListSell.lua" />
-		<Item href="Scripts/ScanAuction.lua" />
-		<Item href="Scripts/PriceInTooltip.lua" />
-		<Item href="Scripts/Options.lua" />
-		<Item href="Scripts/SearchList.lua" />
-		<Item href="Scripts/Tooltip.lua" />
+		<Item href="Scripts/ContainerRemoveFix.lua"/>
+		<Item href="Scripts/LibDnD.lua"/>
+		<Item href="Scripts/Localization.lua"/>
+		<Item href="Scripts/Common.lua"/>
+		<Item href="Scripts/ListBuy.lua"/>
+		<Item href="Scripts/ListSell.lua"/>
+		<Item href="Scripts/ScanAuction.lua"/>
+		<Item href="Scripts/PriceInTooltip.lua"/>
+		<Item href="Scripts/Options.lua"/>
+		<Item href="Scripts/SearchList.lua"/>
+		<Item href="Scripts/Tooltip.lua"/>
 	</ScriptFileRefs>
-	<Form href="Widgets/Main.(WidgetForm).xdb" />
-	<textsGroups>
-		<Item>
-			<groupName>UniSlotCountFormat</groupName>
-			<texts href="Widgets/Tabs/Resources/UniSlot/SlotTextLabel/SlotCountFormat.(UIRelatedTexts).xdb" />
-		</Item>
-	</textsGroups>
+	<Form href="Widgets/Main.(WidgetForm).xdb"/>
 	<texturesGroups>
 		<Item>
 			<groupName>Group01</groupName>
-			<textures href="Textures/Textures.(UIRelatedTextures).xdb" />
+			<textures href="Textures/Textures.(UIRelatedTextures).xdb"/>
 		</Item>
 	</texturesGroups>
-</UIAddon>
+	<textsGroups>
+		<Item>
+			<groupName>UniSlotCountFormat</groupName>
+			<texts href="Widgets/Tabs/Resources/UniSlot/SlotTextLabel/SlotCountFormat.(UIRelatedTexts).xdb"/>
+		</Item>
+	</textsGroups>
+<addon_name>Auction+</addon_name><addon_date>1730235949</addon_date><addon_link>https://alloder.pro/files/file/703-auction/?do=download&amp;r=24252&amp;confirm=1&amp;t=1&amp;csrfKey=</addon_link><localizedNameFileRef href="name.txt"/><localizedDescFileRef href="desc.txt"/></UIAddon>

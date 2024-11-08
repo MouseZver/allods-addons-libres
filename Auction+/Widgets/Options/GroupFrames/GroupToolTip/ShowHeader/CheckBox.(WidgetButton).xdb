@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../../../Buttons/CheckBox/CheckBoxStone.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>showHeader</Reaction>
+		</Item>
+		<Item>
+			<Reaction>showHeader</Reaction>
+		</Item>
+	</Variants>
 	<Name>CheckBox</Name>
 	<Placement>
 		<X>
@@ -14,12 +19,7 @@
 			<Pos>0</Pos>
 		</Y>
 	</Placement>
-	<Variants>
-		<Item>
-			<Reaction>showHeader</Reaction>
-		</Item>
-		<Item>
-			<Reaction>showHeader</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../../../Buttons/CheckBox/CheckBoxStone.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

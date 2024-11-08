@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetGlideSlider>
+	<discreteStep>32</discreteStep>
+	<sliderButton href="ScrollButtonSlider.(WidgetButton).xdb" />
+	<moveArrangement>WIDGETS_ARRANGEMENT_T2B</moveArrangement>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
@@ -14,7 +17,4 @@
 	</Placement>
 	<PickChildrenOnly>false</PickChildrenOnly>
 	<IgnoreDblClick>true</IgnoreDblClick>
-	<discreteStep>32</discreteStep>
-	<sliderButton href="ScrollButtonSlider.(WidgetButton).xdb" />
-	<moveArrangement>WIDGETS_ARRANGEMENT_T2B</moveArrangement>
 </WidgetGlideSlider>

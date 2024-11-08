@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Lots.txt" />
 	<Name>Lots</Name>
 	<Placement>
 		<X>
@@ -15,5 +16,4 @@
 	</Placement>
 	<Visible>true</Visible>
 	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="Lots.txt" />
 </WidgetTextView>

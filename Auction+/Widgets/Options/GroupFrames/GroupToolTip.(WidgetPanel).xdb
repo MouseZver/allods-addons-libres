@@ -6,7 +6,6 @@
 		<Item href="GroupToolTip/GroupLabel.(WidgetTextView).xdb" />
 	</Children>
 	<BackLayer href="Textures/GroupFrame.(WidgetLayerTiledTexture).xdb" />
-	<FrontLayer href="Textures/GroupShade.(WidgetLayerTiledTexture).xdb" />
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_LOW</Align>
@@ -19,4 +18,5 @@
 		</Y>
 	</Placement>
 	<Visible>true</Visible>
+	<FrontLayer href="Textures/GroupShade.(WidgetLayerTiledTexture).xdb" />
 </WidgetPanel>

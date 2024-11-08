@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetScrollableContainer>
+	<border href="Border.(WidgetPanel).xdb" />
+	<widgetsArrangement>WIDGETS_ARRANGEMENT_T2B</widgetsArrangement>
 	<Name>Container</Name>
 	<Placement>
 		<QuantumScale>true</QuantumScale>
@@ -17,6 +19,4 @@
 		</Y>
 	</Placement>
 	<Visible>false</Visible>
-	<border href="Border.(WidgetPanel).xdb" />
-	<widgetsArrangement>WIDGETS_ARRANGEMENT_T2B</widgetsArrangement>
 </WidgetScrollableContainer>

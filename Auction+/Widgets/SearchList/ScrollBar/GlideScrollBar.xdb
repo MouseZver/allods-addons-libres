@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetGlideScrollBar>
+	<slider href="../../Options/GlideScrollBar/GlideSlider.(WidgetGlideSlider).xdb" />
+	<decButton href="../../Options/GlideScrollBar/ScrollButtonUp.(WidgetButton).xdb" />
+	<incButton href="../../Options/GlideScrollBar/ScrollButtonDown.(WidgetButton).xdb" />
 	<BackLayer href="../Textures/ScrollTile.(WidgetLayerTiledTexture).xdb" />
 	<Placement>
 		<X>
@@ -13,7 +16,4 @@
 			<HighPos>0</HighPos>
 		</Y>
 	</Placement>
-	<slider href="../../Options/GlideScrollBar/GlideSlider.(WidgetGlideSlider).xdb" />
-	<decButton href="../../Options/GlideScrollBar/ScrollButtonUp.(WidgetButton).xdb" />
-	<incButton href="../../Options/GlideScrollBar/ScrollButtonDown.(WidgetButton).xdb" />
 </WidgetGlideScrollBar>

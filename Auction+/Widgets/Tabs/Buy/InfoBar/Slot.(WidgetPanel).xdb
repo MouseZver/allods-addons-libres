@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetPanel>
-	<Header>
-		<Prototype href="../../Resources/UniSlot/Slot.Prototype.(WidgetPanel).xdb" />
-	</Header>
 	<Name>Slot</Name>
 	<Placement>
 		<X>
@@ -17,4 +14,7 @@
 		</Y>
 	</Placement>
 	<Visible>true</Visible>
+	<Header>
+		<Prototype href="../../Resources/UniSlot/Slot.Prototype.(WidgetPanel).xdb" />
+	</Header>
 </WidgetPanel>

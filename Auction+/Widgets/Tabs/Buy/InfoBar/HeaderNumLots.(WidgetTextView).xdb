@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="HeaderNumLots.txt" />
+	<TextStyle>
+		<multiline>true</multiline>
+		<wrapText>true</wrapText>
+		<showClippedSymbol>false</showClippedSymbol>
+		<showClippedLine>false</showClippedLine>
+		<ellipsis>false</ellipsis>
+		<Align>ALIGNY_TOP</Align>
+	</TextStyle>
 	<Name>HeaderNumLots</Name>
 	<Placement>
 		<X>
@@ -15,13 +24,4 @@
 		</Y>
 	</Placement>
 	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="HeaderNumLots.txt" />
-	<TextStyle>
-		<multiline>true</multiline>
-		<wrapText>true</wrapText>
-		<showClippedSymbol>false</showClippedSymbol>
-		<showClippedLine>false</showClippedLine>
-		<ellipsis>false</ellipsis>
-		<Align>ALIGNY_TOP</Align>
-	</TextStyle>
 </WidgetTextView>

@@ -135,6 +135,8 @@ function fillTooltip(content)
 	--	common.LogInfo("common", tostring(k), ", ", tostring(v))
 	--end
 
+	if not content or not content.name then return end
+
 	--Itemname
 	local itemaname = CreateSmartLine()
 	itemaname:SetMultiline(true)
@@ -367,7 +369,7 @@ function tooltipPlace(icon)
 	rect.sizeX = rect.x2 - rect.x1
 	rect.sizeY = rect.y2 - rect.y1
 		
-	local frameRect = stateMainForm:GetRealRect()
+	local frameRect = mainForm:GetRealRect()
 	frameRect.sizeX = frameRect.x2 - frameRect.x1
 	frameRect.sizeY = frameRect.y2 - frameRect.y1
 	
@@ -405,7 +407,7 @@ function CallTooltipItem(content, params)
 end
 
 function HideTooltip()
-	cTooltip:RemoveItems()
+	DestroyWidgetsInContainer(cTooltip)
 	wtTooltip:Show(false)
     cTooltip:Show(false)
 end

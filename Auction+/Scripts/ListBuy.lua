@@ -353,9 +353,12 @@ ListBuy.reloadSortIcon = function()
 end
 
 function ClearTabBuy()
+	for key, val in pairs(Lines) do
+		val.widget:DestroyWidget()
+	end
 	Lines = {}
 	LotForBuy = {}
-	Container:RemoveItems()
+	DestroyWidgetsInContainer(Container)
 	CurrentSelectedLine = false
 	ListBuy.ClearInfoBar()
 	ListBuy.reloadSortIcon()
@@ -573,7 +576,6 @@ end
 
 function CloseTabBuy()
 	wtListBuy:Show(false)
-	
 	btTabBuy:SetVariant(0)
 	ClearTabBuy()
 	AuctionMainPanel:GetChildChecked("List", false):Show(true)
@@ -605,13 +607,9 @@ ListBuy.Init = function()
 	common.RegisterReactionHandler(ListBuy.SortItemName, "SortItemName")
 	common.RegisterReactionHandler(ListBuy.slot_over, "slot_over")
 	common.RegisterReactionHandler(ListBuy.BuySelected, "BuySelected")
-	common.RegisterReactionHandler(ListBuy.StartSearch, "StartSearch") --- !!!!
+	common.RegisterReactionHandler(ListBuy.StartSearch, "StartSearch")
 	common.RegisterReactionHandler(OpenTabBuy, "OpenTabBuy")
 	common.RegisterReactionHandler(CloseTabBuy, "CloseTabBuy")
-	
-	DnD.Init(wtListBuy, wtListBuy, true)
-	
-	DnD.Init(wtInfoBar, wtInfoBar, true)
 	
 	FindCategoryId()
 end

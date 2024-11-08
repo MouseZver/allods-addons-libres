@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Texts/Default.txt" />
 	<Name>SmartLine</Name>
 	<Placement>
 		<X>
@@ -15,5 +16,4 @@
 		</Y>
 	</Placement>
 	<Visible>true</Visible>
-	<FormatFileRef href="Texts/Default.txt" />
 </WidgetTextView>

@@ -1,4 +1,4 @@
-local ContextAuction = stateMainForm:GetChildChecked("ContextAuction", false)
+local ContextAuction = common.GetAddonMainForm("ContextAuction")
 Global("AuctionMainPanel", ContextAuction:GetChildUnchecked("Main", false))
 Global("TabAll", AuctionMainPanel:GetChildChecked("TabAll", false))
 Global("TabBids", AuctionMainPanel:GetChildChecked("TabBids", false))
@@ -72,7 +72,7 @@ Global("SearchBar", {
 })
 
 local PlaceholderOrange = common.GetAddonRelatedTextureGroup("Group01"):GetTexture("PlaceholderOrange")
-local UAMContainer = stateMainForm:GetChildChecked("UserAddonManager", false):GetChildChecked("List", true)
+local UAMContainer = common.GetAddonMainForm("UserAddonManager"):GetChildChecked("List", true)
 local btSettings = mainForm:GetChildChecked("Settings", false)
 local btSettingsFound = false
 
@@ -313,8 +313,7 @@ function FillUniSlot(widget, icon, quality, isCursed, stack, charges)
 		countStack = countStack,
 		countCharges = countCharges
 	}
-	--common.SetTextValues( wtCount, textValues )
-	wtCount.SetTextValues( wtCount, textValues )
+	wtCount:SetTextValues( textValues )
 	
 	wtCount:Show( stack ~= nil or charges ~= nil )
 end
@@ -324,8 +323,7 @@ function FindFreeSlots()
 	local AllBagSlot = avatar.GetInventoryItemIds()
 	local j = 1
 	for i = 0, #AllBagSlot - 1 do
-		-- if AllBagSlot[i] == nil then
-		if avatar.GetInventoryItemId( i ) == nil then
+		if AllBagSlot[i] == nil then
 			freeslots[j] = i
 			j = j + 1
 		end

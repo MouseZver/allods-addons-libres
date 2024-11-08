@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="RegularButton/ButtonRegular.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>DefaultOptions</Reaction>
+		</Item>
+	</Variants>
 	<Name>DefaultOptions</Name>
 	<Placement>
 		<X>
@@ -15,9 +17,7 @@
 			<HighPos>18</HighPos>
 		</Y>
 	</Placement>
-	<Variants>
-		<Item>
-			<Reaction>DefaultOptions</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="RegularButton/ButtonRegular.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

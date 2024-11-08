@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetPanel>
-	<Header>
-		<Prototype href="SlotLocked/SlotLocked.Prototype.(WidgetPanel).xdb" />
-	</Header>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
@@ -11,4 +8,7 @@
 			<Align>WIDGET_ALIGN_BOTH</Align>
 		</Y>
 	</Placement>
+	<Header>
+		<Prototype href="SlotLocked/SlotLocked.Prototype.(WidgetPanel).xdb" />
+	</Header>
 </WidgetPanel>

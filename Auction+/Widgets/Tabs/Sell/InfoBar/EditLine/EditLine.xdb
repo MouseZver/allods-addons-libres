@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetEditLine>
+	<isPassword>false</isPassword>
+	<Cursor1Layer href="Cursor.xdb" />
+	<Cursor2Layer href="Cursor2.xdb" />
+	<CursorWidth>2</CursorWidth>
+	<CursorChangeTimeMs>500</CursorChangeTimeMs>
+	<maxSymbolsCount>6</maxSymbolsCount>
+	<canPaste>false</canPaste>
+	<TextStyle>
+		<multiline>false</multiline>
+		<wrapText>false</wrapText>
+		<showClippedSymbol>false</showClippedSymbol>
+		<showClippedLine>false</showClippedLine>
+		<lineSpacing>0</lineSpacing>
+		<ellipsis>true</ellipsis>
+		<Align>ALIGNY_MIDDLE</Align>
+	</TextStyle>
+	<globalClassName>EditLineMoneyAuctionCount</globalClassName>
+	<selectionLayer href="Selection.xdb" />
+	<filterAlias>NUMBERS</filterAlias>
+	<ReactionEnter>EditLineEnter</ReactionEnter>
+	<ReactionEsc>EditLineEsc</ReactionEsc>
+	<ReactionChanged>EditLineChanged</ReactionChanged>
+	<reactionFocusChanged>EditLineFocusChanged</reactionFocusChanged>
+	<reactionOnPointing>EditLineOnPointing</reactionOnPointing>
 	<Name>EditLine</Name>
 	<Placement>
 		<X>
@@ -21,28 +45,4 @@
 	<TransparentInput>false</TransparentInput>
 	<IgnoreDblClick>false</IgnoreDblClick>
 	<fade>1</fade>
-	<reactionOnPointing>EditLineOnPointing</reactionOnPointing>
-	<Cursor1Layer href="Cursor.xdb" />
-	<Cursor2Layer href="Cursor2.xdb" />
-	<CursorWidth>2</CursorWidth>
-	<CursorChangeTimeMs>500</CursorChangeTimeMs>
-	<maxSymbolsCount>6</maxSymbolsCount>
-	<canPaste>false</canPaste>
-	<TextStyle>
-		<multiline>false</multiline>
-		<wrapText>false</wrapText>
-		<showClippedSymbol>false</showClippedSymbol>
-		<showClippedLine>false</showClippedLine>
-		<lineSpacing>0</lineSpacing>
-		<ellipsis>true</ellipsis>
-		<Align>ALIGNY_MIDDLE</Align>
-	</TextStyle>
-	<globalClassName>EditLineMoneyAuctionCount</globalClassName>
-	<selectionLayer href="Selection.xdb" />
-	<filterAlias>NUMBERS</filterAlias>
-	<ReactionEsc>EditLineEsc</ReactionEsc>
-	<ReactionChanged>EditLineChanged</ReactionChanged>
-	<reactionFocusChanged>EditLineFocusChanged</reactionFocusChanged>
-	<isPassword>false</isPassword>
-	<ReactionEnter>EditLineEnter</ReactionEnter>
 </WidgetEditLine>

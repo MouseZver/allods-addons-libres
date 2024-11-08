@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
-	<Header>
-		<Prototype href="SlotTextLabel/SlotCount.Prototype.(WidgetTextView).xdb" />
-	</Header>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
@@ -11,4 +8,7 @@
 			<Align>WIDGET_ALIGN_HIGH</Align>
 		</Y>
 	</Placement>
+	<Header>
+		<Prototype href="SlotTextLabel/SlotCount.Prototype.(WidgetTextView).xdb" />
+	</Header>
 </WidgetTextView>

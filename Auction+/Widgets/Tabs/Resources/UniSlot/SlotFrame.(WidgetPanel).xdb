@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetPanel>
-	<Header>
-		<Prototype href="SlotFrame/SlotFrame.Prototype.(WidgetPanel).xdb" />
-	</Header>
 	<Children>
 		<Item href="SlotCount.(WidgetTextView).xdb" />
 		<Item href="SlotLocked.(WidgetPanel).xdb" />
@@ -15,4 +12,7 @@
 			<Align>WIDGET_ALIGN_BOTH</Align>
 		</Y>
 	</Placement>
+	<Header>
+		<Prototype href="SlotFrame/SlotFrame.Prototype.(WidgetPanel).xdb" />
+	</Header>
 </WidgetPanel>

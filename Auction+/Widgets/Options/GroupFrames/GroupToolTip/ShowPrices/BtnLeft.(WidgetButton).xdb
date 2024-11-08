@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../../../Buttons/CommonPinBtn/PinBtnLeft.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>PricesPrev</Reaction>
+		</Item>
+	</Variants>
 	<Name>BtnLeft</Name>
 	<Placement>
 		<X>
@@ -14,9 +16,7 @@
 			<Pos>0</Pos>
 		</Y>
 	</Placement>
-	<Variants>
-		<Item>
-			<Reaction>PricesPrev</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../../../Buttons/CommonPinBtn/PinBtnLeft.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

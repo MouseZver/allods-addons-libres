@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetEditLine>
+	<Name>Silver</Name>
 	<Header>
 		<Prototype href="../EditLine/EditLine.xdb" />
 	</Header>
-	<Name>Silver</Name>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_HIGH</Align>

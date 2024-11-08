@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="GroupLabel.txt" />
 	<Name>GroupLabel</Name>
 	<BackLayer href="../Textures/GroupLabel.(WidgetLayerTiledTexture).xdb" />
 	<Placement>
@@ -14,5 +15,4 @@
 			<Size>30</Size>
 		</Y>
 	</Placement>
-	<FormatFileRef href="GroupLabel.txt" />
 </WidgetTextView>

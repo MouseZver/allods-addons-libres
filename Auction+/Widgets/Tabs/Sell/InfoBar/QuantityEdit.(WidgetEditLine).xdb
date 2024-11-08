@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetEditLine>
+	<Name>QuantityEdit</Name>
 	<Header>
 		<Prototype href="EditLine/EditLine.xdb" />
 	</Header>
-	<Name>QuantityEdit</Name>
 	<BackLayer href="Textures/AuctionPanelEditable.(WidgetLayerTiledTexture).xdb" />
 	<Placement>
 		<X>
@@ -19,7 +19,7 @@
 			<Size>32</Size>
 		</Y>
 	</Placement>
-	<Visible>true</Visible>
 	<maxSymbolsCount>4</maxSymbolsCount>
 	<globalClassName>EditLineGlobalCenter</globalClassName>
+	<Visible>true</Visible>
 </WidgetEditLine>

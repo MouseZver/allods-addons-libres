@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../Options/Buttons/GoldenCorner/CornerCross.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>CloseList</Reaction>
+		</Item>
+	</Variants>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_HIGH</Align>
@@ -16,9 +18,7 @@
 	</Placement>
 	<Visible>true</Visible>
 	<IgnoreDblClick>true</IgnoreDblClick>
-	<Variants>
-		<Item>
-			<Reaction>CloseList</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../Options/Buttons/GoldenCorner/CornerCross.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

@@ -110,11 +110,11 @@ end
 
 function ClearList()
 	if Options.ScanBy == 2 and not OpenSearchListFromOptions then
-		ContainerForBag:RemoveItems()
+		DestroyWidgetsInContainer(ContainerForBag)
 	elseif Options.ScanBy == 3 and not OpenSearchListFromOptions then
-		ContainerYourList:RemoveItems()
+		DestroyWidgetsInContainer(ContainerYourList)
 	elseif OpenSearchListFromOptions then
-		ContainerYourList:RemoveItems()
+		DestroyWidgetsInContainer(ContainerYourList)
 	end
 end
 

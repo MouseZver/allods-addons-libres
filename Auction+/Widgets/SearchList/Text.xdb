@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Text.txt" />
+	<TextStyle>
+		<multiline>true</multiline>
+	</TextStyle>
 	<Name>Text</Name>
 	<BackLayer href="Background.xdb" />
 	<Placement>
@@ -14,8 +18,4 @@
 			<Pos>0</Pos>
 		</Y>
 	</Placement>
-	<FormatFileRef href="Text.txt" />
-	<TextStyle>
-		<multiline>true</multiline>
-	</TextStyle>
 </WidgetTextView>

@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Name>ScrollButtonSlider</Name>
-	<Placement>
-		<X>
-			<Align>WIDGET_ALIGN_BOTH</Align>
-			<Pos>0</Pos>
-			<HighPos>0</HighPos>
-		</X>
-		<Y>
-			<Pos>0</Pos>
-			<Size>28</Size>
-		</Y>
-	</Placement>
-	<Visible>true</Visible>
-	<IgnoreDblClick>true</IgnoreDblClick>
 	<Variants>
 		<Item>
 			<LayerHighlight href="Textures/ScrollButtonSliderHighlight.(WidgetLayerTiledTexture).xdb" />
@@ -29,4 +15,18 @@
 			<ReactionOnUp>true</ReactionOnUp>
 		</Item>
 	</Variants>
+	<Name>ScrollButtonSlider</Name>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_BOTH</Align>
+			<Pos>0</Pos>
+			<HighPos>0</HighPos>
+		</X>
+		<Y>
+			<Pos>0</Pos>
+			<Size>28</Size>
+		</Y>
+	</Placement>
+	<Visible>true</Visible>
+	<IgnoreDblClick>true</IgnoreDblClick>
 </WidgetButton>

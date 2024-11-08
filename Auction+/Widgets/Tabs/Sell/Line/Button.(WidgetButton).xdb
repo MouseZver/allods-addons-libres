@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Name>Line</Name>
-	<Priority>0</Priority>
-	<Placement>
-		<X>
-			<Align>WIDGET_ALIGN_LOW</Align>
-			<Pos>0</Pos>
-			<Size>778</Size>
-		</X>
-		<Y>
-			<Align>WIDGET_ALIGN_LOW</Align>
-			<Pos>0</Pos>
-			<Size>32</Size>
-		</Y>
-	</Placement>
 	<Variants>
 		<Item>
 			<LayerHighlight href="Textures/AuctionLineHighlight.(WidgetLayerSimpleTexture).xdb" />
@@ -41,4 +27,18 @@
 			<ReactionOnUp>true</ReactionOnUp>
 		</Item>
 	</Variants>
+	<Name>Line</Name>
+	<Priority>0</Priority>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Pos>0</Pos>
+			<Size>778</Size>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_LOW</Align>
+			<Pos>0</Pos>
+			<Size>32</Size>
+		</Y>
+	</Placement>
 </WidgetButton>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../../../Buttons/CommonPinBtn/PinBtnRight.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>ScanNext</Reaction>
+		</Item>
+	</Variants>
 	<Name>BtnRight</Name>
 	<Placement>
 		<X>
@@ -14,9 +16,7 @@
 			<Pos>0</Pos>
 		</Y>
 	</Placement>
-	<Variants>
-		<Item>
-			<Reaction>ScanNext</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../../../Buttons/CommonPinBtn/PinBtnRight.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

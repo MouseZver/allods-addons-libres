@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="HeaderPrice.txt" />
+	<TextStyle>
+		<multiline>false</multiline>
+		<Align>ALIGNY_TOP</Align>
+	</TextStyle>
 	<Name>HeaderPrice</Name>
 	<Placement>
 		<X>
@@ -15,9 +20,4 @@
 		</Y>
 	</Placement>
 	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="HeaderPrice.txt" />
-	<TextStyle>
-		<multiline>false</multiline>
-		<Align>ALIGNY_TOP</Align>
-	</TextStyle>
 </WidgetTextView>

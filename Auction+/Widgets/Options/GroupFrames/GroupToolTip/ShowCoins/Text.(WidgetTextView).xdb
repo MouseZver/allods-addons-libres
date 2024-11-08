@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Text.txt" />
 	<Name>Text</Name>
 	<Placement>
 		<X>
@@ -13,5 +14,4 @@
 		</Y>
 	</Placement>
 	<Enabled>false</Enabled>
-	<FormatFileRef href="Text.txt" />
 </WidgetTextView>

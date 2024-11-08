@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
+	<TextTag>value</TextTag>
+	<Variants>
+		<Item>
+			<StateNormal>
+				<LayerMain href="../Resources/AuctionSortButton/AuctionSortButtonNormal.(WidgetLayerTiledTexture).xdb" />
+				<FormatFileRef href="StatusBarText.txt" />
+			</StateNormal>
+		</Item>
+	</Variants>
+	<TextStyle>
+		<Align>ALIGNY_MIDDLE</Align>
+	</TextStyle>
 	<Name>StatusBar</Name>
 	<Placement>
 		<X>
@@ -15,16 +27,4 @@
 	</Placement>
 	<Visible>true</Visible>
 	<IgnoreDblClick>true</IgnoreDblClick>
-	<TextTag>value</TextTag>
-	<Variants>
-		<Item>
-			<StateNormal>
-				<LayerMain href="../Resources/AuctionSortButton/AuctionSortButtonNormal.(WidgetLayerTiledTexture).xdb" />
-				<FormatFileRef href="StatusBarText.txt" />
-			</StateNormal>
-		</Item>
-	</Variants>
-	<TextStyle>
-		<Align>ALIGNY_MIDDLE</Align>
-	</TextStyle>
 </WidgetButton>

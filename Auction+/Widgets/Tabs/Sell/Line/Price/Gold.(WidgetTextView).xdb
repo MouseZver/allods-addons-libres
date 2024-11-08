@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Gold.txt" />
 	<Name>Gold</Name>
 	<Placement>
 		<X>
@@ -13,7 +14,6 @@
 			<Size>32</Size>
 		</Y>
 	</Placement>
-	<Visible>true</Visible>
-	<FormatFileRef href="Gold.txt" />
 	<DefaultTag>value</DefaultTag>
+	<Visible>true</Visible>
 </WidgetTextView>

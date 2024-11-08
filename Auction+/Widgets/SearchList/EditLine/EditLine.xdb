@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetEditLine>
+	<isPassword>false</isPassword>
+	<ReactionEnter>EditLineEnter</ReactionEnter>
+	<Cursor1Layer href="Cursor.xdb" />
+	<Cursor2Layer href="Cursor2.xdb" />
+	<CursorWidth>2</CursorWidth>
+	<CursorChangeTimeMs>500</CursorChangeTimeMs>
+	<TextStyle>
+		<multiline>false</multiline>
+		<wrapText>true</wrapText>
+		<showClippedSymbol>false</showClippedSymbol>
+		<showClippedLine>true</showClippedLine>
+		<lineSpacing>0</lineSpacing>
+		<ellipsis>true</ellipsis>
+		<Align>ALIGNY_DEFAULT</Align>
+	</TextStyle>
+	<globalClassName>OnPaper</globalClassName>
+	<selectionLayer href="Selection.xdb" />
+	<ReactionEsc>EditLineEsc</ReactionEsc>
+	<ReactionChanged>EditLineChanged</ReactionChanged>
+	<reactionFocusChanged>EditLineFocusChanged</reactionFocusChanged>
 	<Name>EditLine</Name>
 	<Placement>
 		<X>
@@ -19,24 +39,4 @@
 	<IgnoreDblClick>false</IgnoreDblClick>
 	<fade>1</fade>
 	<reactionOnPointing>EditLineOnPointing</reactionOnPointing>
-	<Cursor1Layer href="Cursor.xdb" />
-	<Cursor2Layer href="Cursor2.xdb" />
-	<CursorWidth>2</CursorWidth>
-	<CursorChangeTimeMs>500</CursorChangeTimeMs>
-	<TextStyle>
-		<multiline>false</multiline>
-		<wrapText>true</wrapText>
-		<showClippedSymbol>false</showClippedSymbol>
-		<showClippedLine>true</showClippedLine>
-		<lineSpacing>0</lineSpacing>
-		<ellipsis>true</ellipsis>
-		<Align>ALIGNY_DEFAULT</Align>
-	</TextStyle>
-	<globalClassName>OnPaper</globalClassName>
-	<selectionLayer href="Selection.xdb" />
-	<ReactionEsc>EditLineEsc</ReactionEsc>
-	<ReactionChanged>EditLineChanged</ReactionChanged>
-	<reactionFocusChanged>EditLineFocusChanged</reactionFocusChanged>
-	<isPassword>false</isPassword>
-	<ReactionEnter>EditLineEnter</ReactionEnter>
 </WidgetEditLine>

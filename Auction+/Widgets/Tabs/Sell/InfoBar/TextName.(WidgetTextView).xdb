@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
 	<Name>Text</Name>
+	<FormatFileRef href="TextName.txt" />
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
@@ -15,8 +16,6 @@
 			<Size>32</Size>
 		</Y>
 	</Placement>
-	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="TextName.txt" />
 	<TextStyle>
 		<multiline>false</multiline>
 		<wrapText>true</wrapText>
@@ -26,4 +25,5 @@
 		<ellipsis>true</ellipsis>
 		<Align>ALIGNY_MIDDLE</Align>
 	</TextStyle>
+	<TransparentInput>true</TransparentInput>
 </WidgetTextView>

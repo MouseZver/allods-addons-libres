@@ -367,7 +367,7 @@ function OptionsInit()
     common.RegisterReactionHandler(ShowSearchListNow, "ShowSearchListNow")
     common.RegisterReactionHandler(ShowOptionsPanel, "ShowOptionsPanel")
     CheckSettings()
-    DnD.Init(wtOptions, wtOptions, true, true)
+    --DnD.Init(wtOptions, wtOptions, true, true)
 end
 
 OptionsInit()

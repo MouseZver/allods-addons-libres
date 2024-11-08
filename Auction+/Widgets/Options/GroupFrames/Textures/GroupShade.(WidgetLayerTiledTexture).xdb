@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetLayerTiledTexture>
-	<Color>0x30ffffff</Color>
-	<BlendEffect>BLEND_EFFECT_MULTIPLY</BlendEffect>
 	<textureItem href="GroupShade.(UISingleTexture).xdb" />
 	<Layout>
 		<LeftX>8</LeftX>
@@ -12,4 +10,6 @@
 		<BottomY>5</BottomY>
 	</Layout>
 	<layoutTypeX>WIDGET_LAYER_TILED_LAYOUT_TYPE_SCALED</layoutTypeX>
+	<Color>0x30ffffff</Color>
+	<BlendEffect>BLEND_EFFECT_MULTIPLY</BlendEffect>
 </WidgetLayerTiledTexture>

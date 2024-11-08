@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetPanel>
-	<Header>
-		<isPrototype>true</isPrototype>
-	</Header>
 	<Name>Locked</Name>
 	<Priority>5</Priority>
 	<BackLayer href="SlotLocked.(WidgetLayerSimpleTexture).xdb" />
@@ -16,4 +13,7 @@
 	</Placement>
 	<Visible>false</Visible>
 	<TransparentInput>true</TransparentInput>
+	<Header>
+		<isPrototype>true</isPrototype>
+	</Header>
 </WidgetPanel>

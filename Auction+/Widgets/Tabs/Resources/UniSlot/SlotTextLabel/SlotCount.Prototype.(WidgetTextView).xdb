@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
-	<Header>
-		<isPrototype>true</isPrototype>
-	</Header>
+	<FormatFileRef href="SlotCount.txt" />
+	<TextValues>
+		<Item>
+			<Tag>value</Tag>
+			<TagValueFileRef href="SlotCountValue.txt" />
+		</Item>
+	</TextValues>
 	<Name>Count</Name>
 	<Priority>25</Priority>
 	<Placement>
@@ -20,11 +24,7 @@
 	</Placement>
 	<Visible>true</Visible>
 	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="SlotCount.txt" />
-	<TextValues>
-		<Item>
-			<Tag>value</Tag>
-			<TagValueFileRef href="SlotCountValue.txt" />
-		</Item>
-	</TextValues>
+	<Header>
+		<isPrototype>true</isPrototype>
+	</Header>
 </WidgetTextView>

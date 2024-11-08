@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="SlotButton/SlotButton.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<useDefaultSounds>false</useDefaultSounds>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
@@ -11,6 +9,7 @@
 			<Align>WIDGET_ALIGN_BOTH</Align>
 		</Y>
 	</Placement>
-	<reactionOnPointing>false</reactionOnPointing>
-	<useDefaultSounds>false</useDefaultSounds>
+	<Header>
+		<Prototype href="SlotButton/SlotButton.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

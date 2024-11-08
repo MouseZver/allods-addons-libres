@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Available.txt" />
 	<Name>Available</Name>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
 			<Pos>389</Pos>
 			<HighPos>0</HighPos>
+			<!--Size>96</Size-->
 		</X>
 		<Y>
 			<Align>WIDGET_ALIGN_CENTER</Align>
@@ -14,5 +16,4 @@
 		</Y>
 	</Placement>
 	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="Available.txt" />
 </WidgetTextView>

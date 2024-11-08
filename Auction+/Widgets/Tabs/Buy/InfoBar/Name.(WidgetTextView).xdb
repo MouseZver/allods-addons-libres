@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
+	<FormatFileRef href="Name.txt" />
+	<TextStyle>
+		<multiline>true</multiline>
+	</TextStyle>
 	<Name>Name</Name>
 	<Placement>
 		<X>
@@ -15,8 +19,4 @@
 	</Placement>
 	<Visible>true</Visible>
 	<TransparentInput>true</TransparentInput>
-	<FormatFileRef href="Name.txt" />
-	<TextStyle>
-		<multiline>true</multiline>
-	</TextStyle>
 </WidgetTextView>

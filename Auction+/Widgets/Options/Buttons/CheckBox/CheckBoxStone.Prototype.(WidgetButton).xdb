@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<isPrototype>true</isPrototype>
-	</Header>
-	<Priority>250</Priority>
-	<Placement>
-		<X>
-			<Size>26</Size>
-		</X>
-		<Y>
-			<Size>24</Size>
-		</Y>
-	</Placement>
-	<IgnoreDblClick>true</IgnoreDblClick>
-	<reactionOnPointing>checkbox_over</reactionOnPointing>
 	<Variants>
 		<Item>
 			<LayerHighlight href="CheckBoxStoneHighlight.(WidgetLayerSimpleTexture).xdb" />
@@ -36,4 +22,18 @@
 			<ReactionOnUp>true</ReactionOnUp>
 		</Item>
 	</Variants>
+	<Priority>250</Priority>
+	<Placement>
+		<X>
+			<Size>26</Size>
+		</X>
+		<Y>
+			<Size>24</Size>
+		</Y>
+	</Placement>
+	<IgnoreDblClick>true</IgnoreDblClick>
+	<reactionOnPointing>checkbox_over</reactionOnPointing>
+	<Header>
+		<isPrototype>true</isPrototype>
+	</Header>
 </WidgetButton>

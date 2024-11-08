@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetScrollableContainer>
+	<scrollBar href="ScrollBar/GlideScrollBar.xdb" />
+	<border href="Paper2.xdb" />
+	<widgetsArrangement>WIDGETS_ARRANGEMENT_T2B</widgetsArrangement>
 	<Name>ContainerYourList</Name>
 	<BackLayer href="Textures/PaperTile.(WidgetLayerTiledTexture).xdb" />
 	<Placement>
@@ -18,7 +21,4 @@
 	<PickChildrenOnly>true</PickChildrenOnly>
 	<IgnoreDblClick>true</IgnoreDblClick>
 	<clipContent>false</clipContent>
-	<border href="Paper2.xdb" />
-	<widgetsArrangement>WIDGETS_ARRANGEMENT_T2B</widgetsArrangement>
-	<scrollBar href="ScrollBar/GlideScrollBar.xdb" />
 </WidgetScrollableContainer>

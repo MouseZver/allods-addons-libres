@@ -5,6 +5,7 @@
 		<Item href="TextAlignLeft.(WidgetTextView).xdb" />
 		<Item href="PriceEdit.(WidgetPanel).xdb" />
 	</Children>
+	<BackLayer href="" />
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_LOW</Align>

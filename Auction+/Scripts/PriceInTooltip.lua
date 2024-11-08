@@ -115,7 +115,6 @@ end
 
 function PushPriceInToolTip(container)
 	local Name = container:At(0)
-	common.LogInfo('common', tostring(common.GetApiType(Name)))
 	if (common.GetApiType(Name) ~= "Widget_TextViewSafe") then return end
 	local Itemname = userMods.FromWString(Name:GetWString())
 	if FillContainerPrice(Itemname) then
@@ -156,17 +155,15 @@ function checkAtTooltip(params)
 end
 
 function SearchTooltip(params)
-	--common.LogInfo("common", tostring(params.addonName))
 	if (params.addonName ~= "ContextTooltip") then return end
 	if not params.widget:IsVisibleEx() then return end
 	--checkAtTooltip(params.widget)
-	PushPriceInToolTip(params.widget)
+	PushPriceInToolTip(params.widget:GetChildChecked("Container"))
 end
 
 function PriceInTooltipInit()
 	common.RegisterEventHandler(SearchTooltip, "EVENT_WIDGET_SHOW_CHANGED")
-	stateMainForm:GetChildUnchecked("ContextTooltip", false):GetNamedChildren()[1]:GetChildChecked("Container", false):SetOnShowNotification(true) 
-	stateMainForm:GetChildUnchecked("ContextTooltip", false):GetNamedChildren()[2]:GetChildChecked("Container", false):SetOnShowNotification(true)
+	common.GetAddonMainForm("ContextTooltip"):GetChildChecked("TooltipMain"):SetOnShowNotification(true)
 end
 
 PriceInTooltipInit()

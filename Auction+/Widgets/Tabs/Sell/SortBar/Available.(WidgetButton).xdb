@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../../Resources/AuctionSortButton/AuctionSortButton.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>sort_pressed</Reaction>
+		</Item>
+	</Variants>
 	<Name>Available</Name>
 	<Priority>0</Priority>
 	<Children>
@@ -13,6 +15,7 @@
 			<Align>WIDGET_ALIGN_BOTH</Align>
 			<Pos>389</Pos>
 			<HighPos>0</HighPos>
+			<!--Size>96</Size-->
 		</X>
 		<Y>
 			<Align>WIDGET_ALIGN_CENTER</Align>
@@ -20,9 +23,7 @@
 			<Size>32</Size>
 		</Y>
 	</Placement>
-	<Variants>
-		<Item>
-			<Reaction>sort_pressed</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../../Resources/AuctionSortButton/AuctionSortButton.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

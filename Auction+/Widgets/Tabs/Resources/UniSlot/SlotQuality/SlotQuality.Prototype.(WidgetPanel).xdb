@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetPanel>
-	<Header>
-		<isPrototype>true</isPrototype>
-	</Header>
 	<Name>Quality</Name>
 	<Priority>40</Priority>
 	<BackLayer href="SlotQualityDown.(WidgetLayerSimpleTexture).xdb" />
-	<FrontLayer href="SlotQualityUp.(WidgetLayerSimpleTexture).xdb" />
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
@@ -17,4 +13,8 @@
 	</Placement>
 	<Visible>false</Visible>
 	<TransparentInput>true</TransparentInput>
+	<FrontLayer href="SlotQualityUp.(WidgetLayerSimpleTexture).xdb" />
+	<Header>
+		<isPrototype>true</isPrototype>
+	</Header>
 </WidgetPanel>

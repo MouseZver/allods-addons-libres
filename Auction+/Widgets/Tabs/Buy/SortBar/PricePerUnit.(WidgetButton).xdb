@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../../Resources/AuctionSortButton/AuctionSortButton.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>SortPricePerUnit</Reaction>
+		</Item>
+	</Variants>
 	<Name>PricePerUnit</Name>
 	<Priority>0</Priority>
 	<Placement>
@@ -18,9 +20,7 @@
 		</Y>
 	</Placement>
 	<Visible>true</Visible>
-	<Variants>
-		<Item>
-			<Reaction>SortPricePerUnit</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../../Resources/AuctionSortButton/AuctionSortButton.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

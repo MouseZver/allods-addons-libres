@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<Prototype href="../Resources/AuctionButtonCommon/AuctionButtonCommon.Prototype.(WidgetButton).xdb" />
-	</Header>
+	<Variants>
+		<Item>
+			<Reaction>BuySelected</Reaction>
+		</Item>
+	</Variants>
 	<Name>BuySelected</Name>
 	<Placement>
 		<X>
@@ -18,9 +20,7 @@
 	</Placement>
 	<Visible>false</Visible>
 	<Enabled>false</Enabled>
-	<Variants>
-		<Item>
-			<Reaction>BuySelected</Reaction>
-		</Item>
-	</Variants>
+	<Header>
+		<Prototype href="../Resources/AuctionButtonCommon/AuctionButtonCommon.Prototype.(WidgetButton).xdb" />
+	</Header>
 </WidgetButton>

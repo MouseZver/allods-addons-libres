@@ -14,9 +14,6 @@
 			<Size>33</Size>
 		</Y>
 	</Placement>
-	<Visible>true</Visible>
-	<IgnoreDblClick>true</IgnoreDblClick>
-	<TextTag>value</TextTag>
 	<Variants>
 		<Item>
 			<StateNormal>
@@ -25,7 +22,10 @@
 			</StateNormal>
 		</Item>
 	</Variants>
+	<TextTag>value</TextTag>
 	<TextStyle>
 		<Align>ALIGNY_MIDDLE</Align>
 	</TextStyle>
+	<Visible>true</Visible>
+	<IgnoreDblClick>true</IgnoreDblClick>
 </WidgetButton>

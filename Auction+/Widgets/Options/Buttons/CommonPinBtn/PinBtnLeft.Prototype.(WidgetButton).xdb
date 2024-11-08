@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Header>
-		<isPrototype>true</isPrototype>
-	</Header>
-	<Priority>250</Priority>
-	<Placement>
-		<X>
-			<Size>28</Size>
-		</X>
-		<Y>
-			<Size>28</Size>
-		</Y>
-	</Placement>
-	<IgnoreDblClick>true</IgnoreDblClick>
 	<Variants>
 		<Item>
 			<LayerHighlight href="PinBtnHighlight.(WidgetLayerSimpleTexture).xdb" />
@@ -28,4 +15,17 @@
 			<ReactionOnUp>true</ReactionOnUp>
 		</Item>
 	</Variants>
+	<Priority>250</Priority>
+	<Placement>
+		<X>
+			<Size>28</Size>
+		</X>
+		<Y>
+			<Size>28</Size>
+		</Y>
+	</Placement>
+	<IgnoreDblClick>true</IgnoreDblClick>
+	<Header>
+		<isPrototype>true</isPrototype>
+	</Header>
 </WidgetButton>

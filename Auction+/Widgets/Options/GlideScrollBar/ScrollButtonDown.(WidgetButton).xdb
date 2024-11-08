@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
-	<Name>ScrollButtonDown</Name>
-	<Placement>
-		<X>
-			<Align>WIDGET_ALIGN_CENTER</Align>
-			<Pos>0</Pos>
-			<Size>22</Size>
-		</X>
-		<Y>
-			<Align>WIDGET_ALIGN_HIGH</Align>
-			<HighPos>15</HighPos>
-			<Size>22</Size>
-		</Y>
-	</Placement>
-	<Visible>true</Visible>
-	<IgnoreDblClick>true</IgnoreDblClick>
 	<Variants>
 		<Item>
 			<LayerHighlight href="Textures/ScrollButtonHighlight.(WidgetLayerSimpleTexture).xdb" />
@@ -30,4 +15,19 @@
 			<ReactionOnUp>true</ReactionOnUp>
 		</Item>
 	</Variants>
+	<Name>ScrollButtonDown</Name>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_CENTER</Align>
+			<Pos>0</Pos>
+			<Size>22</Size>
+		</X>
+		<Y>
+			<Align>WIDGET_ALIGN_HIGH</Align>
+			<HighPos>15</HighPos>
+			<Size>22</Size>
+		</Y>
+	</Placement>
+	<Visible>true</Visible>
+	<IgnoreDblClick>true</IgnoreDblClick>
 </WidgetButton>

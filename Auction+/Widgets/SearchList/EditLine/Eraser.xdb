@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
+	<Variants>
+		<Item>
+			<LayerHighlight href="../Textures/ButtonHighlight.(WidgetLayerSimpleTexture).xdb" />
+			<Reaction>ClearLine</Reaction>
+			<ReactionOnUp>true</ReactionOnUp>
+		</Item>
+	</Variants>
 	<Name>Eraser</Name>
 	<BackLayer href="../Textures/Eraser.(WidgetLayerSimpleTexture).xdb" />
 	<Placement>
@@ -16,11 +23,4 @@
 	</Placement>
 	<Visible>true</Visible>
 	<IgnoreDblClick>true</IgnoreDblClick>
-	<Variants>
-		<Item>
-			<LayerHighlight href="../Textures/ButtonHighlight.(WidgetLayerSimpleTexture).xdb" />
-			<Reaction>ClearLine</Reaction>
-			<ReactionOnUp>true</ReactionOnUp>
-		</Item>
-	</Variants>
 </WidgetButton>

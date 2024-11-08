@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetButton>
+	<Variants>
+		<Item>
+			<LayerHighlight href="Settings/SettingsHighlighted.(WidgetLayerSimpleTexture).xdb" />
+			<PushedOffset x="-2" y="2" />
+			<StateNormal>
+				<LayerMain href="Settings/SettingsNormal.(WidgetLayerSimpleTexture).xdb" />
+			</StateNormal>
+			<StatePushed>
+				<LayerMain href="Settings/SettingsPressed.(WidgetLayerSimpleTexture).xdb" />
+			</StatePushed>
+			<Reaction>ShowOptionsPanel</Reaction>
+			<ReactionOnUp>true</ReactionOnUp>
+		</Item>
+	</Variants>
 	<Name>Settings</Name>
 	<Placement>
 		<X>
@@ -15,18 +29,4 @@
 	</Placement>
 	<Visible>false</Visible>
 	<IgnoreDblClick>true</IgnoreDblClick>
-	<Variants>
-		<Item>
-			<LayerHighlight href="Settings/SettingsHighlighted.(WidgetLayerSimpleTexture).xdb" />
-			<PushedOffset x="-2" y="2" />
-			<StateNormal>
-				<LayerMain href="Settings/SettingsNormal.(WidgetLayerSimpleTexture).xdb" />
-			</StateNormal>
-			<StatePushed>
-				<LayerMain href="Settings/SettingsPressed.(WidgetLayerSimpleTexture).xdb" />
-			</StatePushed>
-			<Reaction>ShowOptionsPanel</Reaction>
-			<ReactionOnUp>true</ReactionOnUp>
-		</Item>
-	</Variants>
 </WidgetButton>
