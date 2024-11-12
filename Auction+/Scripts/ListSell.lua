@@ -394,9 +394,23 @@ InfoBar.Fill = function(itemId)
 	FillUniSlot(InfoBar.UniSlot.widget, itemInfo.icon, itemInfo.quality, false, nil, nil)
 	InfoBar.Name.itemName:SetVal("value", itemInfo.name)
 	InfoBar.Name.itemName:SetClassVal("class", ItemQualityClass[itemInfo.quality])
-	InfoBar.Quantity.edit:SetText(common.FormatInt(itemInfo.stackCount, "%d"))
+	InfoBar.Quantity.edit:SetText(common.FormatInt(1, "%d")) -- itemInfo.stackCount to 1
 	SetMoney(InfoBar.StartPrice.price, itemInfo.prices.auctionPrice)
-	InfoBar.Duration["12h"].checkbox:SetVariant(1)
+	InfoBar.Duration["48h"].checkbox:SetVariant(1)
+	
+	local deposit = GetPercentDuration(CheckDuration()) * itemInfo.prices.auctionPrice * (InfoBar.Quantity.edit:GetText():ToInt()) / 100
+	
+	if deposit == 15000 then
+		SetMoney(InfoBar.StartPrice.price, 1911111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 5111111)
+	elseif deposit == 144 then
+		SetMoney(InfoBar.StartPrice.price, 17111111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 19111111)
+	elseif deposit == 1050 then
+		SetMoney(InfoBar.StartPrice.price, 12111111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 15111111)
+	end
+	
 	SetMoney(InfoBar.Deposit.price, GetPercentDuration(CheckDuration()) * itemInfo.prices.auctionPrice * (InfoBar.Quantity.edit:GetText():ToInt()) / 100)
 	InfoBar.CheckValidateValues()
 	return true
