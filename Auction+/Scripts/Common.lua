@@ -320,9 +320,10 @@ end
 
 function FindFreeSlots()
 	local freeslots = {}
-	local AllBagSlot = avatar.GetInventoryItemIds()
+	local AllBagSlot = containerLib.GetItems( ITEM_CONT_INVENTORY )
+	local size = containerLib.GetSize( ITEM_CONT_INVENTORY )
 	local j = 1
-	for i = 0, #AllBagSlot - 1 do
+	for i = 0, size - 1 do
 		if AllBagSlot[i] == nil then
 			freeslots[j] = i
 			j = j + 1

@@ -15,7 +15,7 @@ btTabScan:SetVal("button_label", userMods.ToWString(GetLocalizedText("StartScan"
 AuctionMainPanel:AddChild(btTabScan)
 
 function CheckBag()
-	local AllBagSlot = avatar.GetInventoryItemIds()
+	local AllBagSlot = containerLib.GetItems( ITEM_CONT_INVENTORY )
 	SearchList = {}
 	local i = 1
 	for k, v in pairs(AllBagSlot) do

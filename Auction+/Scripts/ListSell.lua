@@ -1,8 +1,9 @@
 Global("btTabSell", mainForm:GetChildChecked("TabSell", false))
 
-local tableFreeSlots = {} -- вместо постоянного чека слотов свободных
+
 local AuctionItemsCost = {} -- берет из БД ценник дефолтный
 local autoItemSplit = false
+
 
 local AuctionProperties = nil
 local WaitingForEndSpliItem = false
@@ -127,14 +128,16 @@ end
 
 ListSell.SplitItem = function(count)
 	local freeSlotFound = false
+	local tableFreeSlots = FindFreeSlots()
 	if tableFreeSlots and #tableFreeSlots > 0 then
 		for i = 1, #tableFreeSlots do
-			--if avatar.InventoryCanPlaceItemToSlot(itemInfo.id, tableFreeSlots[i]) then
+			if avatar.InventoryCanPlaceItemToSlot(itemInfo.id, tableFreeSlots[i]) then
 				--common.LogInfo("common", "free slot found")
 				freeSlotFound = true
-				avatar.InventorySplitItem(ListSell.slotId, tableFreeSlots[i], count)
+				--avatar.InventorySplitItem(ListSell.slotId, tableFreeSlots[i], count)
+				containerLib.MoveSlotItem( ITEM_CONT_INVENTORY, ListSell.pickSlotId, ITEM_CONT_INVENTORY, tableFreeSlots[i], count)
 				return true
-			--end
+			end
 		end
 		if freeSlotFound == false then
 			--common.LogInfo("common", "free slot Not found")
@@ -152,7 +155,7 @@ ListSell.ValidateSlot = function()
 	--common.LogInfo("common", "ValidateSlot")
 	local itemId = nil
 	if ListSell.slotId or ListSell.slotId ~= nil then
-		itemId = avatar.GetInventoryItemId(ListSell.slotId)
+		itemId = containerLib.GetItem( ITEM_CONT_INVENTORY, ListSell.slotId )
 	end
 	if itemId == nil or itemId ~= itemInfo.id then
 		autoItemSplit = false
@@ -346,7 +349,7 @@ end
 
 ListSell.button_pressed = function(params)
 	if btTabSell:GetVariant() == 0 then return end
-	--common.LogInfo("common", "params.sender = ", tostring(params))
+	--common.LogInfo("common", "params.sender = ", tostring(params.sender))
 	if params.sender == "Post" or params.sender == "PostAll" or params == "all" then
 		if params.sender == "PostAll" then
 			autoItemSplit = true
@@ -361,7 +364,6 @@ ListSell.button_pressed = function(params)
 		else
 			if count < itemInfo.stackCount then
 				if ListSell.SplitItem(count) then
-					--common.LogInfo("common", "ListSell.SplitItem = ", tostring(params))
 					WaitingForEndSpliItem = true
 				end
 			else
@@ -370,11 +372,9 @@ ListSell.button_pressed = function(params)
 				buyoutprice = buyoutprice * count
 				local duration = CheckDuration()
 				if not auction.IsCreationInProgress() then
-					--common.LogInfo("common", "auction.CreateForItem = ", tostring(params))
 					auction.CreateForItem(itemId, startprice, buyoutprice, duration)
 				end
 			end
-			--common.LogInfo("common", "ListSell.ValidateSlot = ", tostring(params))
 			ListSell.ValidateSlot()
 		end
 	elseif params.sender == "Line" then
@@ -688,7 +688,7 @@ function DropInAuction(params)
 	if detected then
 		ListSell.slotId = ListSell.pickSlotId
 		InfoBar.Clear()
-		local itemId = avatar.GetInventoryItemId(ListSell.slotId)
+		local itemId = containerLib.GetItem( ITEM_CONT_INVENTORY, ListSell.slotId )
 		if itemId and itemLib.CanCreateAuction(itemId) then
 			if InfoBar.Fill(itemId) then
 				InfoBar.Enable()
@@ -757,23 +757,15 @@ function EVENT_INVENTORY_SLOT_CHANGED(params)
 end
 
 function EVENT_AUCTION_CREATION_RESULT(params)
---common.LogInfo("common", "EVENT_AUCTION_CREATION_RESULT =====")
---common.LogInfo("common", "WaitingForEndSpliItem ", tostring(WaitingForEndSpliItem))
-	
 	if not WaitingForEndSpliItem and AuctionMainPanel:IsVisible() and btTabSell:GetVariant() == 1 and InfoBar.UniSlot.widget:IsEnabled() then
 		--common.LogInfo("common", "EVENT_0")
-		if ListSell.ValidateSlot() then 
-			InfoBar.CheckQuantity() 
-		end
+		if ListSell.ValidateSlot() then InfoBar.CheckQuantity() end
+		
 		if autoItemSplit then 
 	    	--common.LogInfo("common", "autoItemSplit ", tostring(autoItemSplit))
 		    ListSell.button_pressed( "all" )
 	    end
 	end
-	
-	
---common.LogInfo("common", "WaitingForEndSpliItem ", tostring(WaitingForEndSpliItem))
---common.LogInfo("common", "EVENT_AUCTION_CREATION_RESULT =====")
 end
 
 ListSell.RegWIdgetsIDs = function()

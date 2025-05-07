@@ -28,4 +28,18 @@
 			<texts href="Widgets/Tabs/Resources/UniSlot/SlotTextLabel/SlotCountFormat.(UIRelatedTexts).xdb"/>
 		</Item>
 	</textsGroups>
-<addon_name>Auction+</addon_name><addon_date>1730235949</addon_date><addon_link>https://alloder.pro/files/file/703-auction/?do=download&amp;r=24252&amp;confirm=1&amp;t=1&amp;csrfKey=</addon_link><localizedNameFileRef href="name.txt"/><localizedDescFileRef href="desc.txt"/></UIAddon>
+	<addon_name>Auction+</addon_name>
+	<addon_date>1746187702</addon_date>
+	<addon_link>https://alloder.pro/files/file/703-auction/</addon_link>
+	<localizedNameFileRef href="name.txt"/>
+	<localizedDescFileRef href="desc.txt"/>
+	<userAddonInfo>
+		<name href="name.txt"/>
+		<description href="desc.txt"/>
+		<sourceLink href="link.txt"/>
+		<supportLink href="link.txt"/>
+		<author>AlexPfaltz</author>
+		<version>7</version>
+		<buildTime>1746187702</buildTime>
+	</userAddonInfo>
+</UIAddon>
