@@ -11,6 +11,7 @@
 		<Item href="InfoBar/Deposit.(WidgetPanel).xdb" />
 		<Item href="InfoBar/Totalprice.(WidgetPanel).xdb" />
 		<Item href="InfoBar/Post.(WidgetButton).xdb" />
+		<Item href="InfoBar/PostAll.(WidgetButton).xdb" />
 	</Children>
 	<BackLayer href="Textures/AuctionSearchbarBackground.(WidgetLayerSimpleTexture).xdb" />
 	<Placement>

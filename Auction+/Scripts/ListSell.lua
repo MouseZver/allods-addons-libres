@@ -1,4 +1,9 @@
 Global("btTabSell", mainForm:GetChildChecked("TabSell", false))
+
+local tableFreeSlots = {} -- вместо постоянного чека слотов свободных
+local AuctionItemsCost = {} -- берет из БД ценник дефолтный
+local autoItemSplit = false
+
 local AuctionProperties = nil
 local WaitingForEndSpliItem = false
 local DescLine = nil
@@ -67,6 +72,7 @@ InfoBar.TotalPrice.widget = InfoBar.widget:GetChildChecked("TotalPrice", false)
 InfoBar.TotalPrice.text = InfoBar.TotalPrice.widget:GetChildChecked("Text", false)
 InfoBar.TotalPrice.price = InfoBar.TotalPrice.widget:GetChildChecked("Price", false)
 InfoBar.btPost = InfoBar.widget:GetChildChecked("Post", false)
+InfoBar.btPostAll = InfoBar.widget:GetChildChecked("PostAll", false)
 
 local SortBar = {}
 SortBar.widget = ListSell.widget:GetChildChecked("SortBar", false)
@@ -100,6 +106,7 @@ InfoBar.Duration.text:SetVal("value", GetLocalizedText("Duration"))
 InfoBar.Deposit.text:SetVal("value", GetLocalizedText("Deposit"))
 InfoBar.TotalPrice.text:SetVal("value", GetLocalizedText("TotalPrice"))
 InfoBar.btPost:SetVal("button_label", userMods.ToWString(GetLocalizedText("Post")))
+InfoBar.btPostAll:SetVal("button_label", userMods.ToWString(GetLocalizedText("PostAll")))
 SortBar.Price.widget:SetVal("button_label", userMods.ToWString(GetLocalizedText("Price")))
 SortBar.Price.icon:SetBackgroundTexture(txSortNone)
 SortBar.Price.sorted = "none"
@@ -120,15 +127,14 @@ end
 
 ListSell.SplitItem = function(count)
 	local freeSlotFound = false
-	local tableFreeSlots = FindFreeSlots()
 	if tableFreeSlots and #tableFreeSlots > 0 then
 		for i = 1, #tableFreeSlots do
-			if avatar.InventoryCanPlaceItemToSlot(itemInfo.id, tableFreeSlots[i]) then
+			--if avatar.InventoryCanPlaceItemToSlot(itemInfo.id, tableFreeSlots[i]) then
 				--common.LogInfo("common", "free slot found")
 				freeSlotFound = true
 				avatar.InventorySplitItem(ListSell.slotId, tableFreeSlots[i], count)
 				return true
-			end
+			--end
 		end
 		if freeSlotFound == false then
 			--common.LogInfo("common", "free slot Not found")
@@ -149,6 +155,7 @@ ListSell.ValidateSlot = function()
 		itemId = avatar.GetInventoryItemId(ListSell.slotId)
 	end
 	if itemId == nil or itemId ~= itemInfo.id then
+		autoItemSplit = false
 		ListSell.slotId = nil
 		InfoBar.Clear()
 		InfoBar.DIsable()
@@ -225,7 +232,7 @@ ListSell.AuctionSearch = function()
 		if table.getsize(auctions) > 0 then
 			for i = 0, table.getn(auctions) do
 				local auctionInfo = auction.GetAuctionInfo(auctions[i])
-				if auctionInfo then
+				if auctionInfo and itemLib.GetItemInfo( auctionInfo.itemId ).name == itemInfo.name then
 					ListSell.AddLine(auctionInfo)
 					CountAuctions = CountAuctions + 1
 				end
@@ -306,6 +313,15 @@ ListSell.SortUp = function(param)
 
 		for j = i, ListSell.container:GetElementCount() - 1 do
 			if param == "Price" then
+				if ( i == ListSell.container:GetElementCount() - 1 ) then
+					SetMoney(InfoBar.StartPrice.price,GetMoney(ListSell.container:At(j):GetChildChecked("Price", false)) -1100000) -- itemInfo.prices.auctionPrice
+					SetMoney(InfoBar.BuyoutPrice.price, GetMoney(ListSell.container:At(j):GetChildChecked("Price", false)) -1000000)
+					
+					--common.LogInfo( "", tostring( ListSell.container:At(j):GetName() ) )
+					
+					InfoBar.CheckValidateValues()
+				end
+				
 				desiredvalue = GetMoney(ListSell.container:At(j):GetChildChecked("Price", false))
 			elseif param == "Available" then
 				desiredvalue = ListSell.container:At(j):GetChildChecked("Available", false):GetWString():ToInt()
@@ -330,8 +346,12 @@ end
 
 ListSell.button_pressed = function(params)
 	if btTabSell:GetVariant() == 0 then return end
-	--common.LogInfo("common", "params.sender = ", tostring(params.sender))
-	if params.sender == "Post" then
+	--common.LogInfo("common", "params.sender = ", tostring(params))
+	if params.sender == "Post" or params.sender == "PostAll" or params == "all" then
+		if params.sender == "PostAll" then
+			autoItemSplit = true
+		end
+		
 		local count = InfoBar.Quantity.edit:GetText():ToInt()
 		itemInfo.stackCount = itemLib.GetStackInfo(itemInfo.id).count
 		local startprice = GetMoney(InfoBar.StartPrice.price)
@@ -341,6 +361,7 @@ ListSell.button_pressed = function(params)
 		else
 			if count < itemInfo.stackCount then
 				if ListSell.SplitItem(count) then
+					--common.LogInfo("common", "ListSell.SplitItem = ", tostring(params))
 					WaitingForEndSpliItem = true
 				end
 			else
@@ -349,9 +370,11 @@ ListSell.button_pressed = function(params)
 				buyoutprice = buyoutprice * count
 				local duration = CheckDuration()
 				if not auction.IsCreationInProgress() then
+					--common.LogInfo("common", "auction.CreateForItem = ", tostring(params))
 					auction.CreateForItem(itemId, startprice, buyoutprice, duration)
 				end
 			end
+			--common.LogInfo("common", "ListSell.ValidateSlot = ", tostring(params))
 			ListSell.ValidateSlot()
 		end
 	elseif params.sender == "Line" then
@@ -399,16 +422,38 @@ InfoBar.Fill = function(itemId)
 	InfoBar.Duration["48h"].checkbox:SetVariant(1)
 	
 	local deposit = GetPercentDuration(CheckDuration()) * itemInfo.prices.auctionPrice * (InfoBar.Quantity.edit:GetText():ToInt()) / 100
+	tableFreeSlots = FindFreeSlots()
+	
+	--[[local section = {
+		[userMods.FromWString( itemInfo.name )] = {["s"] = 33311111, ["b"] = 33311111},
+		["gggs"] = {["s"] = 33311111, ["b"] = 33311111}
+	}
+	
+	--common.LogInfo("", userMods.FromWString(params.msg) )
+	
+	userMods.SetGlobalConfigSection( "AuctionItemsCost", section )
 	
 	if deposit == 15000 then
-		SetMoney(InfoBar.StartPrice.price, 1911111) -- itemInfo.prices.auctionPrice
-		SetMoney(InfoBar.BuyoutPrice.price, 5111111)
+		SetMoney(InfoBar.StartPrice.price, 8111111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 11511111)
 	elseif deposit == 144 then
-		SetMoney(InfoBar.StartPrice.price, 17111111) -- itemInfo.prices.auctionPrice
-		SetMoney(InfoBar.BuyoutPrice.price, 19111111)
+		SetMoney(InfoBar.StartPrice.price, 33311111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 45511111)
 	elseif deposit == 1050 then
-		SetMoney(InfoBar.StartPrice.price, 12111111) -- itemInfo.prices.auctionPrice
-		SetMoney(InfoBar.BuyoutPrice.price, 15111111)
+		SetMoney(InfoBar.StartPrice.price, 21111111) -- itemInfo.prices.auctionPrice
+		SetMoney(InfoBar.BuyoutPrice.price, 25111111)
+	end
+	]]
+	
+	
+	
+	for name, c in pairs( AuctionItemsCost ) do
+		if userMods.FromWString( itemInfo.name ) == name then
+			SetMoney( InfoBar.StartPrice.price, c.s )
+			SetMoney( InfoBar.BuyoutPrice.price, c.b )
+			
+			break
+		end
 	end
 	
 	SetMoney(InfoBar.Deposit.price, GetPercentDuration(CheckDuration()) * itemInfo.prices.auctionPrice * (InfoBar.Quantity.edit:GetText():ToInt()) / 100)
@@ -443,6 +488,7 @@ InfoBar.DIsable = function()
 	InfoBar.Deposit.widget:Enable(false)
 	InfoBar.TotalPrice.widget:Enable(false)
 	InfoBar.btPost:Enable(false)
+	InfoBar.btPostAll:Enable(false)
 end
 
 InfoBar.Clear = function()
@@ -465,9 +511,11 @@ InfoBar.CheckValidateValues = function()
 	local quantity = InfoBar.Quantity.edit:GetText():ToInt()
 	if startprice ~= nil and startprice > 0 and buyoutprice ~= nil and buyoutprice > 0 and quantity ~= nil then
 		InfoBar.btPost:Enable(true)
+		InfoBar.btPostAll:Enable(true)
 		StatusBar:SetVal("value", userMods.ToWString(GetLocalizedText("can Post")))
 	else
 		InfoBar.btPost:Enable(false)
+		InfoBar.btPostAll:Enable(false)
 		StatusBar:SetVal("value", userMods.ToWString(GetLocalizedText("values are not correctly")))
 	end
 end
@@ -695,6 +743,11 @@ function EVENT_INVENTORY_SLOT_CHANGED(params)
 			end
 			WaitingForEndSpliItem = false
 		end
+		
+		if autoItemSplit then 
+	    	--common.LogInfo("common", "autoItemSplit ", tostring(autoItemSplit))
+		    ListSell.button_pressed( "all" )
+	    end
 	end
 
 	if not WaitingForEndSpliItem and AuctionMainPanel:IsVisible() and btTabSell:GetVariant() == 1 and InfoBar.UniSlot.widget:IsEnabled() then
@@ -704,10 +757,23 @@ function EVENT_INVENTORY_SLOT_CHANGED(params)
 end
 
 function EVENT_AUCTION_CREATION_RESULT(params)
+--common.LogInfo("common", "EVENT_AUCTION_CREATION_RESULT =====")
+--common.LogInfo("common", "WaitingForEndSpliItem ", tostring(WaitingForEndSpliItem))
+	
 	if not WaitingForEndSpliItem and AuctionMainPanel:IsVisible() and btTabSell:GetVariant() == 1 and InfoBar.UniSlot.widget:IsEnabled() then
 		--common.LogInfo("common", "EVENT_0")
-		if ListSell.ValidateSlot() then InfoBar.CheckQuantity() end
+		if ListSell.ValidateSlot() then 
+			InfoBar.CheckQuantity() 
+		end
+		if autoItemSplit then 
+	    	--common.LogInfo("common", "autoItemSplit ", tostring(autoItemSplit))
+		    ListSell.button_pressed( "all" )
+	    end
 	end
+	
+	
+--common.LogInfo("common", "WaitingForEndSpliItem ", tostring(WaitingForEndSpliItem))
+--common.LogInfo("common", "EVENT_AUCTION_CREATION_RESULT =====")
 end
 
 ListSell.RegWIdgetsIDs = function()
@@ -732,6 +798,8 @@ ListSell.Init = function()
 	common.RegisterReactionHandler(OpenTabSell, "OpenTabSell")
 	common.RegisterReactionHandler(CloseTabSell, "CloseTabSell")
 	ListSell.RegWIdgetsIDs()
+	
+	AuctionItemsCost = userMods.GetGlobalConfigSection( "AuctionItemsCost" )
 end
 
 ListSell.Init()
